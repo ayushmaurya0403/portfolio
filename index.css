@@ -1,0 +1,593 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080d16;
+    color: #e8edf7;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background-color: #080d16 !important;
+
+    min-height: 80px;
+    padding: 0;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+
+/* Navbar width */
+
+.navbar .container-fluid {
+    max-width: 1360px;
+    margin: auto;
+
+    padding: 0 20px;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-brand {
+    color: #e8edf7 !important;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.navbar-brand::first-letter {
+    color: #43d5d0;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar .nav-link {
+    color: #9ba8bd !important;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    padding: 10px 0 !important;
+
+    position: relative;
+
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #45d4d0 !important;
+}
+
+.navbar .nav-link.active {
+    color: #45d4d0 !important;
+}
+
+
+/* Active underline */
+
+.navbar .nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background-color: #45d4d0;
+}
+
+
+/* =====================================================
+   NAVBAR ACTIONS
+===================================================== */
+
+.navbar-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-left: auto;
+}
+
+
+/* Theme button */
+
+.theme-toggle {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #263246;
+
+    background-color: #101827;
+
+    color: #9ba8bd;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #45d4d0;
+
+    border-color: #45d4d0;
+
+    transform: translateY(-2px);
+}
+
+
+/* Resume button */
+
+.resume-btn {
+    min-height: 50px;
+
+    padding: 0 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #45d4d0,
+        #8b82f6
+    );
+
+    color: #071019;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(69, 212, 208, 0.25);
+}
+
+
+/* =====================================================
+   HOME / HERO
+===================================================== */
+
+#home {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 60px 0 40px;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+}
+
+
+/* IMPORTANT:
+   This controls the whole hero width.
+   It keeps the content centered like the reference.
+*/
+
+#home .container {
+    max-width: 1360px;
+}
+
+
+/* =====================================================
+   AVAILABILITY
+===================================================== */
+
+.availability {
+    color: #45d4d0;
+
+    font-family: monospace;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
+
+.hero-title {
+    color: #f0f4fb;
+
+    font-size: 60px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Gradient name */
+
+.name-gradient {
+    background: linear-gradient(
+        90deg,
+        #45d4d0,
+        #7b9cf5
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.hero-subtitle {
+    color: #a2afc3;
+
+    font-size: 20px;
+
+    line-height: 1.55;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.hero-subtitle span {
+    color: #45d4d0;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-description {
+    max-width: 610px;
+
+    color: #9aa8bd;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 28px;
+}
+
+
+/* Project button */
+
+.project-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+
+    padding: 0 28px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #45d4d0,
+        #8b82f6
+    );
+
+    color: #071019;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    color: #071019;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(69, 212, 208, 0.25);
+}
+
+
+/* Hero resume button */
+
+.resume-hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+
+    padding: 0 28px;
+
+    border-radius: 12px;
+
+    border: 1px solid #263246;
+
+    background-color: #111a2a;
+
+    color: #e6edf7;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.resume-hero-btn:hover {
+    color: #ffffff;
+
+    border-color: #45d4d0;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.social-links a {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #263246;
+
+    background-color: #101827;
+
+    color: #9ba8bd;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #45d4d0;
+
+    border-color: #45d4d0;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+.profile-image {
+    width: 470px;
+    height: 470px;
+
+    max-width: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(69, 212, 208, 0.08);
+
+    box-shadow:
+        0 0 60px rgba(69, 212, 208, 0.05);
+}
+
+
+/* =====================================================
+   MOBILE NAVBAR
+===================================================== */
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    #home {
+        padding: 70px 0 50px;
+
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .profile-image {
+        width: 380px;
+        height: 380px;
+
+        margin-top: 50px;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+
+        padding: 15px 0;
+    }
+
+    .navbar .nav-link {
+        padding: 8px 0 !important;
+    }
+
+    .navbar .nav-link.active::after {
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+    #home {
+        padding: 55px 20px;
+    }
+
+    .hero-title {
+        font-size: 46px;
+    }
+
+    .hero-subtitle {
+        font-size: 19px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .project-btn,
+    .resume-hero-btn {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+}

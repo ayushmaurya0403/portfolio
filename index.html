@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link for bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <!-- link for icons  -->
+    <link
+     rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+   <!-- link for my local css . -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">AM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-actions">
+        <button class="theme-toggle">*</button>
+        <button class="resume-btn" id="navbarResumeButton">Download Resume</button>
+    </div>
+  </div>
+</nav>
+<!-- Home Section -->
+<section id="home">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Side -->
+            <div class="col-lg-6 order-2 order-lg-1">
+
+                <p class="availability">
+                    // available for opportunities
+                </p>
+
+                <h1 class="hero-title">
+                    Hi, I'm
+                    <span class="name-gradient" id="userName"></span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    <span id="userRole"></span>
+                </p>
+
+                <p class="hero-description" id="userDescription"></p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="project-btn">
+                        View My Projects
+                    </a>
+
+                    <a
+                        href="#"
+                        id="resumeLink"
+                        class="resume-hero-btn"
+                        download
+                    >
+                        ↓ &nbsp; Download Resume
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a
+                        href="#"
+                        id="githubLink"
+                        aria-label="GitHub"
+                        target="_blank"
+                    >
+                       <i class="bi bi-github"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        id="linkedinLink"
+                        aria-label="LinkedIn"
+                        target="_blank"
+                    >
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a
+                        href="#"
+                        id="LeetcodeLink"
+                        aria-label="Leetcode"
+                        target="_blank"
+                    >
+                    <i class="bi bi-braces"></i>
+                    </a>
+
+                    <a
+                        href="#"
+                        id="emailLink"
+                        aria-label="Email"
+                    >
+                         <i class="bi bi-envelope-at"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Right Side -->
+            <div class="col-lg-6 text-center order-1 order-lg-2">
+
+<img
+    id="profileImage"
+    src="assets/profile.jpeg"
+    alt="Ayush Maurya"
+    class="profile-image"
+>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
